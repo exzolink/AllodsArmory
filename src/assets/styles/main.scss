@@ -1,0 +1,102 @@
+@import "./base.scss";
+
+body {
+  background-image: url("@/assets/images/bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.v-skeleton-loader {
+  &:not(.loaded) {
+    background: $bg-default-flat;
+  }
+
+  &.loaded {
+    background: none;
+  }
+}
+
+.v-card {
+  &.v-card--variant {
+    &-elevated,
+    &-flat {
+      will-change: backdrop-filter;
+      background: $bg-default;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+  }
+
+  &.v-card--background-none {
+    background: none;
+  }
+
+  &.v-card--background-flat,
+  &-item.v-card-item--background-flat {
+    background: $bg-default-flat;
+  }
+
+  & & {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+.v-list {
+  &.v-list--one-line {
+    &.v-list--background-light {
+      background: $bg-light;
+    }
+  }
+}
+
+.v-list.v-list--one-line {
+  background: none;
+}
+
+.icon {
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
+  display: block;
+
+  &-item {
+    border-radius: inherit;
+
+    &-wrapper {
+      position: relative;
+      width: 45px;
+      height: 45px;
+      border-radius: 4px;
+      background-color: lighten($black, 3%);
+    }
+
+    &-tier {
+      position: absolute;
+      bottom: 2px;
+      left: 2px;
+    }
+
+    &-border {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      opacity: 0.6;
+      outline: 2px ridge;
+      outline-offset: -1.75px;
+      pointer-events: none;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-position: top left;
+  }
+}

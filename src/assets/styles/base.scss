@@ -1,0 +1,53 @@
+@include font("Roboto", normal, 400, "../fonts/Roboto-Regular.woff2");
+@include font("Roboto", normal, 500, "../fonts/Roboto-Medium.woff2");
+@include font("Roboto", normal, 700, "../fonts/Roboto-Bold.woff2");
+
+:root {
+  --color-background: #{$black};
+  --color-text: #{$white};
+  --color-pink: #{$pink};
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background-color: lighten($black, 3%);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+a,
+button {
+  user-select: none;
+}
+
+img {
+  font-size: 0;
+}
+
+#app {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 60px 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 500px) {
+  #app {
+    padding: 50px 10px 15px 10px;
+  }
+}

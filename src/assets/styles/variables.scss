@@ -1,0 +1,11 @@
+$black: rgb(27, 25, 32);
+$white: rgb(208, 208, 208);
+$pink: rgb(255, 176, 255);
+$green: rgb(123, 202, 124);
+$darkgreen: rgb(114, 177, 155);
+$orange: rgb(246, 124, 65);
+
+$bg-default: rgba(var(--v-theme-surface), 0.75);
+$bg-default-flat: rgb(var(--v-theme-surface));
+
+$bg-light: rgba($white, 0.04);
