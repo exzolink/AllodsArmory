@@ -75,7 +75,7 @@
 
     <div class="item-tooltip__description ao_golden" v-html="item.description"></div>
     <span v-if="item.lifetime > 0" class="ao_blue"
-    >Предмет исчезнет через: {{ convertMsToDays(item.lifetime) }} дн.</span
+      >Предмет исчезнет через: {{ convertMsToDays(item.lifetime) }} дн.</span
     >
   </v-tooltip>
 </template>
