@@ -1,3 +1,3 @@
 # allods-armory
  Оружейная Аллоды Онлайн
- https://exzolink.github.io/allods-armory/dist
+ https://exzolink.github.io/AllodsArmory/dist
