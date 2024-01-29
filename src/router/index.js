@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router"
 import HomeView from "@/views/HomeView.vue"
 
 const router = createRouter({
-  history: createWebHashHistory("/allods-armory/dist/"),
+  history: createWebHashHistory("/AllodsArmory/dist/"),
   routes: [
     {
       path: "/",
